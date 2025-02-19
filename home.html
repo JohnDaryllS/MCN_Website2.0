@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -61,6 +62,119 @@
         </div>
     </section>
 
+    <section class="upcoming-container">
+        <div class="container-events">
+            <h2>Upcoming Events</h2>
+            <div class="image-box" id="eventImage" style="background-image: url('image/event10.jpg');"></div>
+            <p class="description" id="eventDescription">Stay updated with our latest events and don't miss out on any important dates.</p>
+            <div class="buttons">
+                <button onclick="changeEvent('image/event10.jpg', 'Join us for an exciting event on Feb 20!')">Feb 20 - Event 1</button>
+                <button onclick="changeEvent('image/event11.jpg', 'Experience an unforgettable night on Feb 25!')">Feb 25 - Event 2</button>
+                <button onclick="changeEvent('image/event12.jpg', 'Learn and grow with us on Mar 5!')">Mar 5 - Event 3</button>
+                <button onclick="changeEvent('image/event13.jpg', 'A special gathering awaits you on Mar 15!')">Mar 15 - Event 4</button>
+                <button onclick="changeEvent('image/event14.jpg', 'Don’t miss out on the fun on Mar 20!')">Mar 20 - Event 5</button>
+                <button onclick="changeEvent('image/event15.jpg', 'Get ready for an adventure on Apr 10!')">Apr 10 - Event 6</button>
+                <button onclick="changeEvent('image/event16.jpg', 'A fantastic experience on Apr 25!')">Apr 25 - Event 7</button>
+                <button onclick="changeEvent('image/event17.jpg', 'Celebrate with us on May 1!')">May 1 - Event 8</button>
+                <button onclick="changeEvent('image/event18.jpg', 'Mark your calendar for May 10!')">May 10 - Event 9</button>
+                <button onclick="changeEvent('image/event19.jpg', 'A grand finale on May 20!')">May 20 - Event 10</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-container">
+        <h2>FOCCUS - Certified</h2>
+            <div class="marquee">
+                <img src="image/ademc.png" alt="Logo 1">
+                <img src="image/cevcc.jpg" alt="Logo 2">
+                <img src="image/fcc.png" alt="Logo 3">
+                <img src="image/icc.png" alt="Logo 4">
+                <img src="image/kapa;ong.jpg" alt="Logo 5">
+                <img src="image/magrow.jpg" alt="Logo 6">
+                <img src="image/nico.jpg" alt="Logo 7">
+                <img src="image/panabo.jpg" alt="Logo 8">
+                <img src="image/pantukan.png" alt="Logo 9">
+                <img src="image/silangan.jpg" alt="Logo 10">
+                <img src="image/simc.png" alt="Logo 11">
+                <img src="image/tagum.jpg" alt="Logo 12">
+                <img src="image/uspd.jpg" alt="Logo 13">
+            </div>
+            <div class="marquee">
+              <img src="image/ademc.png" alt="Logo 1">
+              <img src="image/cevcc.jpg" alt="Logo 2">
+              <img src="image/fcc.png" alt="Logo 3">
+              <img src="image/icc.png" alt="Logo 4">
+              <img src="image/kapa;ong.jpg" alt="Logo 5">
+              <img src="image/magrow.jpg" alt="Logo 6">
+              <img src="image/nico.jpg" alt="Logo 7">
+              <img src="image/panabo.jpg" alt="Logo 8">
+              <img src="image/pantukan.png" alt="Logo 9">
+              <img src="image/silangan.jpg" alt="Logo 10">
+              <img src="image/simc.png" alt="Logo 11">
+              <img src="image/tagum.jpg" alt="Logo 12">
+              <img src="image/uspd.jpg" alt="Logo 13">
+          </div>
+        </div>
+      
+
+    <div class="contact-container">
+
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <div><img src="https://img.icons8.com/ios/50/000000/address--v1.png"/> 123 Street, Davao City, Philippines</div>
+            <div><img src="https://img.icons8.com/ios/50/000000/phone--v1.png"/> +63 912 345 6789 | +63 987 654 3210</div>
+            <div><img src="https://img.icons8.com/ios/50/000000/new-post.png"/> email@example.com | support@example.com</div>
+            <div>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/facebook.png"/></a>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/twitter.png"/></a>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/instagram-new.png"/></a>
+            </div>
+        </div>
+    
+        <!-- Contact Form & Map Section -->
+        <div class="contact-bottom">
+            <!-- Contact Form -->
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                    
+                    <button class="button" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <!-- Map Container -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps?q=2F,+Molave+Street+corner+Calamansi+Street+Juna+Subdivision,+Matina,+Davao+City&output=embed" allowfullscreen></iframe>
+            </div>
+        </div>
+    
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+          <p><a href="privacypolicy.html">Privacy Policy</a> &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <img src="img/favicon.png" alt="Footer Logo">
+          <p>Powered by Model Cooperative Network</p>
+        </div>
+      </footer>
+
     <script src="js/nav.js"></script>
+    <script src="js/contact-email.js"></script>
+    <script src="js/upcoming-events.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
