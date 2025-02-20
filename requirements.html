@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<style>
+
+    .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 150px 20px 20px 20px;
+    }
+
+    .header {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+    }
+    .header h1 {
+            color: #007bff;
+    }
+
+    .requirements {
+            margin-bottom: 20px;
+    }
+
+    .requirements h2 {
+            color: #007bff;
+    }
+
+    .requirements ul {
+            list-style: none;
+            padding-left: 0;
+    }
+
+    .requirements ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+    }
+
+    .requirements ul li::before {
+            content: "•";
+            color: #007bff;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+    }
+        
+    .form-container-membership {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+    }
+
+    .form-container-membership h1 {
+            color: #004085;
+            text-align: center;
+    }
+
+    .form-container-membership .form-group {
+            margin-bottom: 15px;
+    }
+
+    .form-container-membership label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+    }
+
+    .form-container-membership input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+    }
+
+    .form-container-membership textarea {
+            resize: vertical;
+    }
+
+    .form-container-membership .btn {
+            display: block;
+            width: 100%;
+            background-color: #004085;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+    }
+
+    .form-container-membership .btn:hover {
+            background-color: #002752;
+    }
+
+    .form-container-membership .info-section {
+            margin-top: 30px;
+    }
+</style>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo-container">
+            <img src="image/logo1.png" alt="Logo 1" class="logo">
+            <img src="image/logo2.png" alt="Logo 2" class="logo">
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+        <ul class="nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a class="dropdown-btn">Services &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="monitoring.html">Monitoring to Adherence to Prudence Standards</a></li>
+                    <li><a href="branding.html">Foccus Branding</a></li>
+                    <li><a href="capability-building.html">Capability Building</a></li>
+                    <li><a href="consultancy.html">Consultancy</a></li>
+                    <li><a href="audit.html">Audit & Accounting Services</a></li>
+                    <li><a href="revolving.html">Foccus Revolving Fund Facility</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-btn">Membership &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="appguidelines.html">Membership Application Guidelines</a></li>
+                    <li><a href="requirements.html">Requirements for Membership Application</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-btn">About Us &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="aboutus.html">Brief Background</a></li>
+                    <li><a href="financialdiscipline.html">Financial Discipline</a></li>
+                    <li><a href="listofpartners.html">List of Partners</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-btn">Governance &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="bod.html">Board of Directors</a></li>
+                    <li><a href="companies.html">MCN Members</a></li>
+                </ul>
+            </li>
+            <li><a href="news&events.html">News & Events</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="faqs.html">FAQS</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Membership Application</h1>
+        </div>
+    
+        <div class="requirements">
+            <h2>Requirements for Membership Application</h2>
+            <ul>
+                <li>Accomplished Membership Application</li>
+                <li>Board Resolution (contains intent to apply for membership, as well as the Official Representative and Alternate Representative)</li>
+                <li>CDA Certificate of Registration</li>
+                <li>Articles of Cooperation (and Amendments, if any)</li>
+                <li>By-Laws (and Amendments, if any)</li>
+                <li>Audited FS (last 3 years) and Latest Interim Financial Statement</li>
+                <li>List of Board of Directors, Officers, and General Manager/CEO</li>
+                <li>COC</li>
+            </ul>
+        </div>
+    
+        <div class="form-container-membership">
+            <h1>Application for Membership</h1>
+            <form class="app-form">
+                <div class="form-group">
+                    <label for="coop-name">Registered Name of the Cooperative</label>
+                    <input type="text" id="coop-name" name="coop-name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="cda-registration">CDA Registration #</label>
+                    <input type="text" id="cda-registration" name="cda-registration" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="tin">TIN #</label>
+                    <input type="text" id="tin" name="tin">
+                </div>
+    
+                <div class="form-group">
+                    <label for="coop-type">Coop Type</label>
+                    <input type="text" id="coop-type" name="coop-type">
+                </div>
+    
+                <div class="form-group">
+                    <label for="coop-anniversary">Coop Anniversary</label>
+                    <input type="date" id="coop-anniversary" name="coop-anniversary">
+                </div>
+    
+                <div class="form-group">
+                    <label for="office-address">Office Address</label>
+                    <textarea id="office-address" name="office-address" rows="3"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="branches">No. of Branches including Head Office</label>
+                    <input type="number" id="branches" name="branches">
+                </div>
+    
+                <div class="form-group">
+                    <label>Contact Information</label>
+                    <div>
+                        <input type="text" id="office-number" name="office-number" placeholder="Office #">
+                    </div><br>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Coop Email Address">
+                    </div><br>
+                    <div>
+                        <input type="text" id="fb-page" name="fb-page" placeholder="FB Page">
+                    </div><br>
+                    <div>
+                        <input type="url" id="website" name="website" placeholder="Website (if any)">
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="authorized-rep">Name of Authorized Representative and Designation</label>
+                    <textarea id="authorized-rep" name="authorized-rep" rows="3"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="alternate-rep">Contact # of Alternate Representative</label>
+                    <textarea id="alternate-rep" name="alternate-rep" rows="3"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="total-assets">Total Assets</label>
+                    <input type="text" id="total-assets" name="total-assets">
+                </div>
+    
+                <div class="form-group">
+                    <label for="members">No. of Members</label>
+                    <textarea id="members" name="members" rows="3" placeholder="Female, Male, Youth, IP"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="bond">Common Bond of Membership</label>
+                    <textarea id="bond" name="bond" rows="2"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="services">Services Offered to Members</label>
+                    <textarea id="services" name="services" rows="3"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="affiliation">Affiliation to any Federation/Union/Coop Council</label>
+                    <textarea id="affiliation" name="affiliation" rows="2"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="share-capital">Proposed Share Capital Subscription (Php20,000.00 is the minimum SC subscription)</label>
+                    <input type="number" id="share-capital" name="share-capital">
+                </div>
+    
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+      
+
+    <div class="contact-container">
+
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <div><img src="https://img.icons8.com/ios/50/000000/address--v1.png"/> 2F, Molave Street corner Calamansi Street Juna Subdivision, Matina, Davao City</div>
+            <div><img src="https://img.icons8.com/ios/50/000000/phone--v1.png"/> (082)224-1002 | (082) 333-6712</div>
+            <div><img src="https://img.icons8.com/ios/50/000000/new-post.png"/> mcnfederation@gmail.com | admin@mcnfoccuscoops.com</div>
+            <div>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/facebook.png"/></a>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/twitter.png"/></a>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/instagram-new.png"/></a>
+            </div>
+        </div>
+    
+        <!-- Contact Form & Map Section -->
+        <div class="contact-bottom">
+            <!-- Contact Form -->
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                    
+                    <button class="button" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <!-- Map Container -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps?q=2F,+Molave+Street+corner+Calamansi+Street+Juna+Subdivision,+Matina,+Davao+City&output=embed" allowfullscreen></iframe>
+            </div>
+        </div>
+    
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+          <p><a href="privacypolicy.html">Privacy Policy</a> &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <img src="image/favicon.png" alt="Footer Logo">
+          <p>Powered by Model Cooperative Network</p>   
+        </div>
+      </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/contact-email.js"></script>
+    <script src="js/upcoming-events.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>

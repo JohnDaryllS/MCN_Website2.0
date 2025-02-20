@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo-container">
+            <img src="image/logo1.png" alt="Logo 1" class="logo">
+            <img src="image/logo2.png" alt="Logo 2" class="logo">
+        </div>
+        <span class="menu-toggle">&#9776;</span>
+        <ul class="nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a class="dropdown-btn">Services &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="monitoring.html">Monitoring to Adherence to Prudence Standards</a></li>
+                    <li><a href="branding.html">Foccus Branding</a></li>
+                    <li><a href="capability-building.html">Capability Building</a></li>
+                    <li><a href="consultancy.html">Consultancy</a></li>
+                    <li><a href="audit.html">Audit & Accounting Services</a></li>
+                    <li><a href="revolving.html">Foccus Revolving Fund Facility</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-btn">Membership &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="appguidelines.html">Membership Application Guidelines</a></li>
+                    <li><a href="requirements.html">Requirements for Membership Application</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-btn">About Us &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="aboutus.html">Brief Background</a></li>
+                    <li><a href="financialdiscipline.html">Financial Discipline</a></li>
+                    <li><a href="listofpartners.html">List of Partners</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropdown-btn">Governance &#9662;</a>
+                <ul class="dropdown">
+                    <li><a href="bod.html">Board of Directors</a></li>
+                    <li><a href="companies.html">MCN Members</a></li>
+                </ul>
+            </li>
+            <li><a href="news&events.html">News & Events</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="faqs.html">FAQS</a></li>
+        </ul>
+    </nav>
+
+    <section class="services-section">
+        <div class="container-services">
+          <div class="text">
+              <h2><span>FOCCUS REVOLVING FUND FACILITY</span></h2>
+              <p>The federation LINKS COOPERATIVES WITH EXCESS LIQUIDITY to COOPERATIVES THAT ARE IN NEED OF CREDIT TO FINANCE EXPANSION OF OPERATIONS.</p>
+          </div>
+          <div class="image">
+              <img src="image/wired-lineal-946-equity-security-in-reveal.gif" alt="Sample Image">
+          </div>
+      </div>
+      <div class="container-services">
+        <div class="image">
+          <img src="image/wired-lineal-945-dividends-hover-pinch.gif" alt="Sample Image">
+      </div>
+        <div class="text">
+          <p>The Federation offers competitive interest rates for savings deposits and loans to its members. Through prudent savings and credit management practices, the federation seeks to maximize the gains accruing to the cooperatives that participate in the revolving fund program, either as inventor or borrower.</p>
+        </div>
+        </div>
+    </section>
+      
+
+    <div class="contact-container">
+
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <div><img src="https://img.icons8.com/ios/50/000000/address--v1.png"/> 2F, Molave Street corner Calamansi Street Juna Subdivision, Matina, Davao City</div>
+            <div><img src="https://img.icons8.com/ios/50/000000/phone--v1.png"/> (082)224-1002 | (082) 333-6712</div>
+            <div><img src="https://img.icons8.com/ios/50/000000/new-post.png"/> mcnfederation@gmail.com | admin@mcnfoccuscoops.com</div>
+            <div>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/facebook.png"/></a>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/twitter.png"/></a>
+                <a href="#"><img src="https://img.icons8.com/ios/50/000000/instagram-new.png"/></a>
+            </div>
+        </div>
+    
+        <!-- Contact Form & Map Section -->
+        <div class="contact-bottom">
+            <!-- Contact Form -->
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                    
+                    <button class="button" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+    
+            <!-- Map Container -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps?q=2F,+Molave+Street+corner+Calamansi+Street+Juna+Subdivision,+Matina,+Davao+City&output=embed" allowfullscreen></iframe>
+            </div>
+        </div>
+    
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+          <p><a href="privacypolicy.html">Privacy Policy</a> &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <img src="image/favicon.png" alt="Footer Logo">
+          <p>Powered by Model Cooperative Network</p>   
+        </div>
+      </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/contact-email.js"></script>
+    <script src="js/upcoming-events.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>
