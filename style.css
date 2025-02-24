@@ -1318,6 +1318,23 @@ button:hover {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .logo {
+      width: 100px;
+    }
+
+    .home {
+      height: 60vh;
+    }
+
+    .home-content{
+      font-size: 15px;
+    }
+
+    .btn{
+      margin-top: 10px;
+      font-size: 15px;
+      padding: 10px 20px;
+    }
     .contact-info {
         padding: 15px;
     }
@@ -1325,10 +1342,201 @@ button:hover {
         padding: 15px;
     }
 
+      /* Upcoming Event */
+    .container-events h2 {
+      padding: 20px 0;
+    }
+    .image-box {
+      height: 200px;
+    }
+    button {
+      padding: 5px;
+      font-size: 10px;
+    }
+
+    /* Review Section */
+
+  .reviews{
+    padding: 20px;
+  }
+
+  .reviews h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .review-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .comment {
+    font-size: 0.8rem;
+  }
+
+  .overall-rating {
+    font-size: 1rem;
+  }
+
+  /* carousel Slider */
+
+  .carousel-track img {
+    width: 140px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 20px;
+  }
+
+  /* Services */
+
+.services h2 {  
+  font-size: 2rem;
+}
+
+.services-section {
+  padding: 40px;
+}
+
+.container-services {
+  padding: 20px;
+}
+
+.container-services .text {
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 10px;
+}
+
+.container-services .text h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.container-services .text p {
+  font-size: 10px;
+  color: #555;
+}
+
+.container-services .foccus{
+  max-width: 50px;
+}
+    
+.container-services .image img {
+  width: 100px;
+  margin-top: 50px;
+}
+
+/* About Us */
+.about-us {
+  padding: 20px 20px;
+}
+
+.about-us h2 {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.about-us img {
+  width: 100px;
+}
+
+.about-us p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.vision-mission-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.vision-mission-container p {
+  padding-bottom: 50px;
+}
+
+.vision-mission-container h1 {
+  font-size: 1.6rem;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+}
+
+.inner-circle {
+  width: 90%;
+  height: 90%;
+  font-size: 10px;
+}
+
+.vision-mission-container h2 {
+  font-size: 1.5rem;
+}
+
+.vision-mission-container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.core-values-container {
+  padding: 10px;
+}
+
+.core-values-container h1 {
+  font-size: 1.7rem;
+}
+
+.core-values-container h3 {
+  font-size: 1rem;
+}
+
+.core-values-container p {
+  font-size: 0.7rem;
+}
+
+/* Letter Animation */
+
+.letters-animation {
+  height: 20vh;
+}
+.letters {
+  font-size: 50px;
+}
+
+.meaning {
+  font-size: 15px;
+}
+
+/* Partners Section */
+.partner-slider-container {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.partner-slider-container h2 {
+  font-size: 40px;
+}
+
+.partner-slider-container h3 {
+  font-size: 20px;
+}
+.partner-slider-container .container {
+  width: 300px;
+}
+.partner-slider-container .logo {
+  width: 50px;
+  height: 50px;
+}
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  
     .contact-bottom {
         flex-direction: column;
     }
