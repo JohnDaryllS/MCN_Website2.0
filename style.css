@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Navigation Bar */
@@ -52,6 +56,11 @@ body {
     font-size: 17px;
     display: block;
 }
+
+.nav-list a:hover {
+  color: #007BFF;
+}
+
 .dropdown {
     display: none;
     position: absolute;
@@ -213,46 +222,65 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Marquee Slider */
+/* carousel Slider */
 
-.marquee-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background: #fff;
-    white-space: nowrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 20px 0;
+.infinite-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 90%;
+  background-color: #fff;
+  position: relative;
+  padding: 20px 0;  
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(150px * 13 * 2);
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .marquee-container h2 {
-    text-align: center;
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .marquee {
-      display: inline-block;
-      animation: scroll 20s linear infinite;
-      gap: 40px;
-      padding-top: 10px;
-      will-change: transform;
-  }
-  
-  .marquee img {
-      height: 80px;
-      gap: 20px;
-      width: auto;
-  }
-  
-  @keyframes scroll {
-      0% {
-          transform: translateX(0);
-      }
-      100% {
-          transform: translateX(-100%);
-      }
-  }
+}
+
+.carousel::before,
+.carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
 
 /* Services */
 .services {
@@ -1076,6 +1104,13 @@ button:hover {
 
 /* Contact Us */
 
+.contact {
+  background-image: url(image/contact\ background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .contact-container {
     width: 90%;
     max-width: 1200px;
@@ -1091,7 +1126,7 @@ button:hover {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 .contact-info div {
     margin: 10px 0;
@@ -1154,6 +1189,100 @@ button:hover {
     border-radius: 8px;
 }
 
+
+/* Review Section */
+
+.reviews{
+  padding: 40px;
+  background-color: #474d4f;
+}
+
+.reviews h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: none;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.review-card.visible {
+  display: flex;
+}
+
+.review-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.comment {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.overall-rating {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.see-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+}
+
 /* Footer Section */
 .footer {
     display: flex;
@@ -1195,12 +1324,22 @@ button:hover {
     .contact-form, .contact-map {
         padding: 15px;
     }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .contact-bottom {
         flex-direction: column;
+    }
+
+    .review-card {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .review-content {
+      text-align: left;
     }
 }
 
