@@ -1122,10 +1122,7 @@ button:hover {
 /* Contact Us */
 
 .contact {
-  background-image: url(image/contact\ background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #bababa;
 }
 
 .contact-container {
