@@ -16,7 +16,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: hsl(0, 0%, 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.5);
   color: rgb(0, 0, 0);
   padding: 10px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -147,7 +149,7 @@ body {
   
   .home-content {
     position: absolute;
-    top: 40%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -728,7 +730,7 @@ button:hover {
     margin: 0;
     padding: 150px;
     background-color: rgba(255, 255, 255, 0.7);
-    height: 102%;
+    height: 100%;
   }
   .member {
     display: inline-block;
@@ -759,7 +761,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: hsl(0, 0%, 94%);
     flex-direction: column;
     overflow: hidden;
   }
@@ -777,7 +779,7 @@ button:hover {
     width: 250px;
     height: 300px;
     padding: 10px;
-    background: white;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1122,7 +1124,10 @@ button:hover {
 /* Contact Us */
 
 .contact {
-  background-color: #bababa;
+  background-image: url(image/contact-background1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contact-container {
@@ -1137,7 +1142,9 @@ button:hover {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: #fff;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
@@ -1168,7 +1175,9 @@ button:hover {
 .form-container, .contact-map {
     flex: 1;
     min-width: 300px;
-    background: #fff;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
