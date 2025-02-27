@@ -9,6 +9,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
+    <div id="loader">
+        <video id="loading-video" src="videos/loadingScreen.mp4" autoplay muted></video>
+    </div>
     <nav class="navbar" id="navbar">
         <div class="logo-container">
             <a href="home.html"><img src="image/logo1.png" alt="Logo 1" class="logo"></a>
@@ -140,9 +143,8 @@
     </section>
 
 
-        <section class="contact">
-    <div class="contact-container" id="contact-us">
-    
+    <section class="contact" id="contact-us">
+    <div class="contact-container">
         <!-- Contact Form & Map Section -->
         <div class="contact-bottom">
             <!-- Contact Form -->
@@ -182,9 +184,7 @@
                 <a href="https://www.instagram.com/mcnfoccuscoops" target="_blank"><img src="https://img.icons8.com/ios/50/000000/instagram-new.png"/></a>
             </div>
         </div>
-    
     </div>
-
 </section>
 
     <button id="scrollToTopBtn" title="Go to top">⇮</button>
@@ -199,6 +199,7 @@
         </div>
       </footer>
 
+    <script src="js/loading-screen.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/upcoming-events.js"></script>
     <script src="js/scrollbutton.js"></script>
