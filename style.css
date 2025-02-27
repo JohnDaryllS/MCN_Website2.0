@@ -747,38 +747,68 @@ button:hover {
     border-radius: 5px;
   }
 
- /* BOD */
+/* BOD */
+.tree {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 150px 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+}
 
- .tree {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 150px;
-    background-color: rgba(255, 255, 255, 0.7);
-    height: 100%;
-  }
-  .member {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-  }
-  .member img {
-    width: 100px;
-    height: 100px;
-    border: 3px solid #007bff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  .member .title {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #000000;
-  }
-  .connections {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+/* General Member Styling */
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.member .title {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Chairperson & Vice Chairperson - Horizontal Layout */
+.top-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Directors Section - 2-1-2 Formation in Row */
+.directors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Representatives - Horizontal Layout */
+.connections {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+
 
 /* Card Animation */
 
@@ -1383,6 +1413,7 @@ button:hover {
 
     .home-content{
       font-size: 15px;
+      top: 40%;
     }
 
     .btn{
@@ -1703,6 +1734,24 @@ button:hover {
 .pop-up-animation {
     width: 95%;
     max-width: 350px;
+}
+
+.tree {
+  padding-top: 100px;
+}
+
+/* Make all sections stack in column */
+.top-members,
+.directors,
+.connections {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Make individual members full width */
+.member {
+  width: 100%;
+  max-width: 300px;
 }
 }
 
