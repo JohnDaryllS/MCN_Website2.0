@@ -150,6 +150,7 @@ body {
 #loader video {
   width: 100%;
   height: auto;
+  pointer-events: none;
 }
 
 
@@ -772,7 +773,7 @@ button:hover {
   height: 100px;
   border: 3px solid #007bff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .member .title {
@@ -1622,9 +1623,14 @@ button:hover {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.card-animation {
+  width: 200px;
+  padding: 10px;
+}
+
 .pop-up-animation {
-  width: 90%;
-  max-width: 300px;
+  width: 80%;
+  max-width: 200px;
 }
 }
 
