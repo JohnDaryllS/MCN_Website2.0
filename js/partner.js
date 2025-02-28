@@ -14,10 +14,6 @@ function createPartnerElement(partner) {
     div.innerHTML = `
         <img class="logo" src="${partner.logo}" alt="${partner.title}">
         <h3>${partner.title}</h3>
-        <div class="buttons">
-            <a href="${partner.website}" target="_blank">Website</a>
-            <a href="${partner.facebook}" target="_blank">Facebook</a>
-        </div>
     `;
     return div;
 }

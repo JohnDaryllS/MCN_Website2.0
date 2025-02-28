@@ -9,6 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
+
+    <div id="loading-screen">
+        <div class="mcn-loader"></div> <!-- Rotating MCN Loader -->
+    </div>
+
     <nav class="navbar" id="navbar">
         <div class="logo-container">
             <a href="home.html"><img src="image/logo1.png" alt="Logo 1" class="logo"></a>
@@ -73,23 +78,20 @@
         </p>
     
         <h2>The following Financial Discipline adhered to by FOCCUS cooperatives have been proven to improve cooperatives operations:</h2>
-      </section>
-    
-      <div class="hex-section">
-        <div class="hex-container">
-          <div class="hex" style="background-color: #003366;" onclick="showPopup('Delinquency Control - should be not more than 5% of the loan portfolio; Directors, Officers, and Staff can be expelled on the grounds of loan deliquency.')">Delinquency Control</div>
-          <div class="hex" style="background-color: #286a12;" onclick="showPopup('Provision for Loan Losses -100% for loans that are more than 12 months delinquent, 35% for loans that are delinquent for 30 - 360 days.')">Provision for Loan Losses</div>
-          <div class="hex" style="background-color: #9aa317;" onclick="showPopup('Liquidity Control - liquid assets should not be less than 20% of its deposit liabilities and other short-term liabilities.')">Liquidity Control</div>
-          <div class="hex" style="background-color: #8c2e95;" onclick="showPopup('Control of Non-earning Asset - should not be more that 5% of the total assets.')">Control of Non-earning Asset</div>
-          <div class="hex" style="background-color: #59110c;" onclick="showPopup('Constitutional Capital Accumulation - reserves should be maintained equal to 10% of the total assets.')">Capital Accumulation</div>
-          <div class="hex" style="background-color: #156d7a;" onclick="showPopup('Earnings Improvement - limit operating cost to under 5% of the total assets and returns on assets is not lower than the inflation rate.')">Earnings Improvement</div>
-          <div class="center-circle">FOCCUS</div>
-      </div>
-        <div class="popup" id="popup">
-            <button class="close-btn" onclick="closePopup()"><img src="img/211650_close_circled_icon.png" alt="" style="height: 20px;"></button>
-            <p id="popup-text"></p>
+
+        <div class="financialDiscipline">
+            <button onclick="showImages(1)">Delinquency Control</button>
+            <button onclick="showImages(2)">Earnings Improvement</button>
+            <button onclick="showImages(3)">Capital Accumulation</button>
+            <button onclick="showImages(4)">Control of Non-earning Asset</button>
+            <button onclick="showImages(5)">Liquidity Control</button>
+            <button onclick="showImages(6)">Provision for Loan Losses</button>
         </div>
-      </div>
+        <div class="imageDiscipline" id="imageContainer">
+            <img id="image1" src="" alt="Image 1">
+            <img id="image2" src="" alt="Image 2">
+        </div>
+      </section>
       
 
       <section class="contact">
@@ -153,6 +155,8 @@
       </footer>
 
     <script src="js/nav.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/financial.js"></script>
     <script src="js/upcoming-events.js"></script>
     <script src="js/scrollbutton.js"></script>
     <script src="js/popup-container.js"></script>
