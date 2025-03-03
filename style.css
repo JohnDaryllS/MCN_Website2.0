@@ -791,6 +791,9 @@ button:hover {
       flex: 1;
       min-width: 120px;
       text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
   .member img {
       width: 100px;
