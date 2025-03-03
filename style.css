@@ -186,6 +186,23 @@ body {
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
+
+  #typing-text {
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Adjusts based on screen size */
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid rgb(12, 31, 117); /* Cursor effect */
+    display: inline-block;
+    animation: blink 0.7s step-end infinite;
+    max-width: 100%;
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
   
   .btn {
     background-color: #0048ff;
@@ -436,70 +453,40 @@ button:hover {
     margin-bottom: 20px;
   }
 
-  .vision-mission-container {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .vision-mission-container p {
-    padding-bottom: 50px;
-  }
-  
-  .vision-mission-container h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 40px;
-  }
-  
-  .circles {
+  .vission-mission {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
     display: flex;
-    justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
-  }
-  
-  .circle {
-    background: linear-gradient(135deg, #ffcf33, #0049d0);
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+}
+
+.vission-mission .box {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vission-mission .box:hover {
+    transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
-    transition: transform 0.3s ease;
+}
+
+.vission-mission  h2 {
+      color: #333;
+      padding-bottom: 30px;
   }
 
-  .circle:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .inner-circle {
-    background-color: white;
-    border-radius: 50%;
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .vision-mission-container h2 {
-    font-size: 1.5rem;
-    color: #0049d0;
-    margin-bottom: 10px;
-  }
-  
-  .vision-mission-container p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.4;
+  .vission-mission  p {
+      color: #666;
+      line-height: 1.6;
   }
 
   .core-values-container {
@@ -766,66 +753,70 @@ button:hover {
     border-radius: 5px;
   }
 
-/* BOD */
-.tree {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 150px 50px;
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100%;
-}
+  /*Bod*/
+  .bod-section {
+    height: 100%;
+    background-image: url(image/13.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-/* General Member Styling */
-.member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-  text-align: center;
-}
+  .bod-title {
+    padding-top: 150px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
 
-.member img {
-  width: 100px;
-  height: 100px;
-  border: 3px solid #007bff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-}
 
-.member .title {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #000000;
+  .board-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
-/* Chairperson & Vice Chairperson - Horizontal Layout */
-.top-members {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-}
-
-/* Directors Section - 2-1-2 Formation in Row */
-.directors {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  max-width: 800px;
-}
-
-/* Representatives - Horizontal Layout */
-.connections {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 600px;
-}
+  .row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+  .member {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+  }
+  .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 5px;
+      object-fit: cover;
+      margin-bottom: 10px;
+  }
+  .top, .bottom {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  }
+  .top {
+      margin-bottom: 20px;
+  }
+  .middle {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+  }
+  .bottom {
+      margin-top: 20px;
+  }
 
 
 
@@ -1449,12 +1440,23 @@ button:hover {
     }
 
       /* Upcoming Event */
+
+    .slider{
+      height: 200px;
+    }
+
+    .news-image{
+      height: 200px;
+    }
+
     .container-events h2 {
       padding: 20px 0;
     }
+
     .image-box {
       height: 200px;
     }
+
     button {
       padding: 5px;
       font-size: 10px;
