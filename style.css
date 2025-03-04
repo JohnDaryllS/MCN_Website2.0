@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   background: rgba(255, 255, 255, 0.5);
   color: rgb(0, 0, 0);
   padding: 10px 0;
@@ -859,6 +859,7 @@ button:hover {
     transition: transform 0.3s ease-in-out;
     position: relative;
     z-index: 2;
+    overflow: hidden;
 }
 
 .card-animation img {
@@ -879,8 +880,57 @@ button:hover {
     transform: scale(1.1);
 }
 
+.animation-button-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: hsla(0, 0%, 100%, 0.807);
+}
+
+
+
+.show-website, .see-details {
+  background-color: #0073e6;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 50px;
+}
+
+.show-website:hover, .see-details:hover {
+  background-color: #005bb5;
+}
+
+.card-animation:hover .animation-button-container {
+  opacity: 1;
+}
+
+.show-website {
+  background-color: #0073e6;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 10px;
+  margin-top: 240px;
+}
+
 .see-details {
-  margin-top: 20px;
+  margin-top: 240px;
+  margin-right: 10px;
   background-color: #0073e6;
   border: none;
   color: white;
