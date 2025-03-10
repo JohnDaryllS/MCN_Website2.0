@@ -79,18 +79,24 @@
     
         <h2>The following Financial Discipline adhered to by FOCCUS cooperatives have been proven to improve cooperatives operations:</h2>
 
-        <div class="financialDiscipline">
-            <button onclick="showImages(1)">Delinquency Control</button>
-            <button onclick="showImages(2)">Earnings Improvement</button>
-            <button onclick="showImages(3)">Capital Accumulation</button>
-            <button onclick="showImages(4)">Control of Non-earning Asset</button>
-            <button onclick="showImages(5)">Liquidity Control</button>
-            <button onclick="showImages(6)">Provision for Loan Losses</button>
+        <div class="allHexa">
+            <div class="container">
+                <div class="center">FUCCOS</div>
+                <div class="hexagon" data-title="Delinquency Control" data-description="Managing overdue accounts and reducing financial risks.">Delinquency Control</div>
+                <div class="hexagon" data-title="Earnings Improvement" data-description="Strategies to maximize revenue and profit.">Earnings Improvement</div>
+                <div class="hexagon" data-title="Capital Accumulation" data-description="Ensuring sustainable financial growth over time.">Capital Accumulation</div>
+                <div class="hexagon" data-title="Control of Non-earning Asset" data-description="Optimizing assets that do not generate revenue.">Control of Non-earning Asset</div>
+                <div class="hexagon" data-title="Liquidity Control" data-description="Maintaining a balance between assets and liabilities.">Liquidity Control</div>
+                <div class="hexagon" data-title="Provision for Loan Losses" data-description="Setting aside funds for potential loan defaults.">Provision for Loan Losses</div>
+            </div>
         </div>
-        <div class="imageDiscipline" id="imageContainer">
-            <img id="image1" src="" alt="Image 1">
-            <img id="image2" src="" alt="Image 2">
+
+        <div class="popup-container" id="popup">
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+            <button class="closing-btn" onclick="closePopup()">Close</button>
         </div>
+
       </section>
       
 
@@ -162,5 +168,22 @@
     <script src="js/popup-container.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="js/contact-email.js"></script>
+    <script>
+        document.querySelectorAll(".hexagon").forEach(hex => {
+            hex.addEventListener("click", function() {
+                const title = this.getAttribute("data-title");
+                const description = this.getAttribute("data-description");
+
+                document.getElementById("popup-title").textContent = title;
+                document.getElementById("popup-description").textContent = description;
+
+                document.getElementById("popup").style.display = "block";
+            });
+        });
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
 </body>
 </html>
