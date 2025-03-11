@@ -597,10 +597,10 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 50vh;
     flex-direction: column;
 }
-.container {
+.hexa-container {
     position: relative;
     width: 300px;
     height: 300px;
@@ -609,16 +609,18 @@ button:hover {
 /* Hexagon Shape */
 .hexagon {
     position: absolute;
-    width: 100px;
-    height: 115px;
+    width: 130px;
+    height: 145px;
     background-color: #2ecc71;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-weight: bold;
-    color: white;
-    font-size: 11px;
+    background-color: #023556;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15px;
     cursor: pointer;
     transition: transform 0.6s ease-in-out;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -636,10 +638,10 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 115px;
-    background-color: #3498db;
-    color: white;
+    width: 130px;
+    height: 145px;
+    background-color: #c7d80c;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -650,12 +652,12 @@ button:hover {
 }
 
 /* Hexagon Positions */
-.hexagon:nth-child(2) { top: 22%; left: 67%; transform: translate(-50%, -50%); }
-.hexagon:nth-child(3) { top: 22%; left: 34%; transform: translate(-50%, -50%); }
-.hexagon:nth-child(4) { top: 50%; right: 18%; transform: translate(50%, -50%); }
-.hexagon:nth-child(5) { bottom: 50%; left: 18%; transform: translate(-50%, 50%); }
-.hexagon:nth-child(6) { bottom: 22%; right: 34%; transform: translate(50%, 50%); }
-.hexagon:nth-child(7) { bottom: 22%; left: 34%; transform: translate(-50%, 50%); }
+.hexagon:nth-child(2) { top: 14%; left: 72%; transform: translate(-50%, -50%); }
+.hexagon:nth-child(3) { top: 14%; left: 28%; transform: translate(-50%, -50%); }
+.hexagon:nth-child(4) { top: 50%; right: 7%; transform: translate(50%, -50%); }
+.hexagon:nth-child(5) { bottom: 50%; left: 7%; transform: translate(-50%, 50%); }
+.hexagon:nth-child(6) { bottom: 14%; right: 28%; transform: translate(50%, 50%); }
+.hexagon:nth-child(7) { bottom: 14%; left: 28%; transform: translate(-50%, 50%); }
 
 /* Pop-up styling */
 .popup-container {
