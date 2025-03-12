@@ -1240,7 +1240,7 @@ button:hover {
 /* FAQ'S */
 .faqs {
   width: 100%;
-  height: 120vh;
+  height: 100%;
   background-image: url(image/Free\ Vector\ _\ Spot\ Light\ Background.jpg);
   background-size: cover;
   background-position: center;
@@ -1248,7 +1248,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 200px;
+  padding: 600px 0 400px 0;
 }
 
 .faq-container {
