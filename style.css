@@ -784,6 +784,11 @@ button:hover {
   overflow: hidden;
 }
 
+.partners h2 {
+  font-size: 50px;
+  margin: 50px 0;
+}
+
 .partner-slider-container {
   width: 950px;
   overflow: hidden;
@@ -1031,12 +1036,10 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   width: 330px;
-  height: 400px;
+  height: auto;
   padding: 10px;  
-  background-image: url(image/MCN\ BACK.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: rgb(254,254,1);
+  background: linear-gradient(90deg, rgba(254,254,1,1) 0%, rgba(255,255,255,1) 42%, rgba(255,255,255,1) 58%, rgba(18,3,185,1) 100%);
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -1078,7 +1081,7 @@ button:hover {
   border: none;
   font-size: 18px;
   cursor: pointer;
-  color: #377fcc;
+  color: #ffffff;
 }
 
 /* Card disappearing effect */

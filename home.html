@@ -11,8 +11,13 @@
 </head>
 <body>
     <div id="loader">
-        <video id="loading-video" src="videos/finalFinal.mp4" autoplay muted></video>
+        <video id="loading-video" src="videos/Legit Complete (1).mp4" autoplay muted></video>
     </div>
+
+    <audio id="bg-music">
+        <source src="videos/welcome voice.mp3" type="audio/mpeg">
+      </audio>
+
     <nav class="navbar" id="navbar">
         <div class="logo-container">
             <a href="home.html"><img src="image/logo1.png" alt="Logo 1" class="logo"></a>
@@ -64,7 +69,7 @@
 
     <section class="upcoming-container">
         <div class="container-events">
-            <h2>Upcoming Events</h2>
+            <h2>Upcoming Trainings</h2>
             <div class="image-box" id="eventImage" style="background-image: url('image/UPCOMING-EVENTS.png');"></div>
             <p class="description" id="eventDescription">Stay updated with our latest events and don't miss out on any important dates.</p>
             <div class="buttons">
@@ -73,7 +78,7 @@
                 <button onclick="changeEvent('image/event12.jpg', 'Learn and grow with us on Mar 5!')">Mar 5 - Event 3</button>
                 <button onclick="changeEvent('image/event13.jpg', 'A special gathering awaits you on Mar 15!')">Mar 15 - Event 4</button>
                 <button onclick="changeEvent('image/event14.jpg', 'Don’t miss out on the fun on Mar 20!')">Mar 20 - Event 5</button>
-                <button onclick="changeEvent('image/event15.jpg', 'Get ready for an adventure on Apr 10!')">Apr 10 - Event 6</button>
+                <!-- <button onclick="changeEvent('image/event15.jpg', 'Get ready for an adventure on Apr 10!')">Apr 10 - Event 6</button>
                 <button onclick="changeEvent('image/event16.jpg', 'A fantastic experience on Apr 25!')">Apr 25 - Event 7</button>
                 <button onclick="changeEvent('image/event17.jpg', 'Celebrate with us on May 1!')">May 1 - Event 8</button>
                 <button onclick="changeEvent('image/event18.jpg', 'Mark your calendar for May 10!')">May 10 - Event 9</button>
@@ -87,7 +92,7 @@
                 <button onclick="changeEvent('image/event16.jpg', 'A fantastic experience on Apr 25!')">Apr 25 - Event 7</button>
                 <button onclick="changeEvent('image/event17.jpg', 'Celebrate with us on May 1!')">May 1 - Event 8</button>
                 <button onclick="changeEvent('image/event18.jpg', 'Mark your calendar for May 10!')">May 10 - Event 9</button>
-                <button onclick="changeEvent('image/event19.jpg', 'A grand finale on May 20!')">May 20 - Event 10</button>
+                <button onclick="changeEvent('image/event19.jpg', 'A grand finale on May 20!')">May 20 - Event 10</button> -->
             </div>
         </div>
     </section>
@@ -196,5 +201,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="js/contact-email.js"></script>
+    <script src="js/bgAudio.js"></script>
 </body>
 </html>
