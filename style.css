@@ -458,6 +458,7 @@ button:hover {
 
 .about-us h2 {
   padding-top: 80px;
+  padding-bottom: 20px;
 }
   
 .about-us img {
@@ -695,6 +696,7 @@ button:hover {
   width: 300px;
   display: none;
   text-align: center;
+  z-index: 1000;
 }
 
 .popup-container h2 {
@@ -1477,6 +1479,18 @@ span{
 .footer-right p {
   font-size: 0.9rem;
 }
+
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
