@@ -164,22 +164,7 @@
     <script src="js/popup-container.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="js/contact-email.js"></script>
-    <script>
-        document.querySelectorAll(".hexagon").forEach(hex => {
-            hex.addEventListener("click", function() {
-                const title = this.getAttribute("data-title");
-                const description = this.getAttribute("data-description");
-
-                document.getElementById("popup-title").textContent = title;
-                document.getElementById("popup-description").textContent = description;
-
-                document.getElementById("popup").style.display = "block";
-            });
-        });
-
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-        }
-    </script>
+    <script src="js/disabled.js"></script>
+    <script src="js/hexa.js"></script>
 </body>
 </html>

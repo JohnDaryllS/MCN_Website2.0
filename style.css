@@ -1480,15 +1480,29 @@ span{
   font-size: 0.9rem;
 }
 
-#searchInput {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 10px auto;
-  display: block;
-  border: 1px solid #ccc;
+/* Modal Styling */
+.warning-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.warning-modal button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
   border-radius: 5px;
-  font-size: 16px;
 }
 
 
