@@ -15,7 +15,7 @@
     <div id="warningModal" class="warning-modal">
         <p>Right-clicking is disabled on this website!</p>
       </div>
-      
+
     <div id="loader">
         <video id="loading-video" src="videos/Legit Complete (1).mp4" autoplay muted></video>
     </div>
@@ -73,33 +73,58 @@
         </div>
     </section>
 
-    <section class="upcoming-container">
-        <div class="container-events">
-            <h2>Upcoming Trainings</h2>
-            <div class="image-box" id="eventImage" style="background-image: url('image/UPCOMING-EVENTS.png');"></div>
-            <p class="description" id="eventDescription">Stay updated with our latest events and don't miss out on any important dates.</p>
-            <div class="buttons">
-                <button onclick="changeEvent('image/event10.jpg', 'Join us for an exciting event on Feb 20!')">Feb 20 - Event 1</button>
-                <button onclick="changeEvent('image/event11.jpg', 'Experience an unforgettable night on Feb 25!')">Feb 25 - Event 2</button>
-                <button onclick="changeEvent('image/event12.jpg', 'Learn and grow with us on Mar 5!')">Mar 5 - Event 3</button>
-                <button onclick="changeEvent('image/event13.jpg', 'A special gathering awaits you on Mar 15!')">Mar 15 - Event 4</button>
-                <button onclick="changeEvent('image/event14.jpg', 'Don’t miss out on the fun on Mar 20!')">Mar 20 - Event 5</button>
-                <!-- <button onclick="changeEvent('image/event15.jpg', 'Get ready for an adventure on Apr 10!')">Apr 10 - Event 6</button>
-                <button onclick="changeEvent('image/event16.jpg', 'A fantastic experience on Apr 25!')">Apr 25 - Event 7</button>
-                <button onclick="changeEvent('image/event17.jpg', 'Celebrate with us on May 1!')">May 1 - Event 8</button>
-                <button onclick="changeEvent('image/event18.jpg', 'Mark your calendar for May 10!')">May 10 - Event 9</button>
-                <button onclick="changeEvent('image/event19.jpg', 'A grand finale on May 20!')">May 20 - Event 10</button>
-                <button onclick="changeEvent('image/event10.jpg', 'Join us for an exciting event on Feb 20!')">Feb 20 - Event 1</button>
-                <button onclick="changeEvent('image/event11.jpg', 'Experience an unforgettable night on Feb 25!')">Feb 25 - Event 2</button>
-                <button onclick="changeEvent('image/event12.jpg', 'Learn and grow with us on Mar 5!')">Mar 5 - Event 3</button>
-                <button onclick="changeEvent('image/event13.jpg', 'A special gathering awaits you on Mar 15!')">Mar 15 - Event 4</button>
-                <button onclick="changeEvent('image/event14.jpg', 'Don’t miss out on the fun on Mar 20!')">Mar 20 - Event 5</button>
-                <button onclick="changeEvent('image/event15.jpg', 'Get ready for an adventure on Apr 10!')">Apr 10 - Event 6</button>
-                <button onclick="changeEvent('image/event16.jpg', 'A fantastic experience on Apr 25!')">Apr 25 - Event 7</button>
-                <button onclick="changeEvent('image/event17.jpg', 'Celebrate with us on May 1!')">May 1 - Event 8</button>
-                <button onclick="changeEvent('image/event18.jpg', 'Mark your calendar for May 10!')">May 10 - Event 9</button>
-                <button onclick="changeEvent('image/event19.jpg', 'A grand finale on May 20!')">May 20 - Event 10</button> -->
+    <section class="upcoming-trainings-section">
+        <div class="upcoming-trainings-container">
+            <div class="upcoming-trainings-buttons">
+                <button id="upcoming-btn" class="btn-trainings active" onclick="showUpcoming()">Upcoming Trainings</button>
+                <button id="finished-btn" class="btn-trainings" onclick="showFinished()">Finished Trainings</button>
             </div>
+            <div id="upcoming-trainings">
+                <div class="training-section" data-date="2025-04-04">
+                    <img class="training-image" src="image/UT1.jpg" alt="Training Image">
+                    <div class="training-content">
+                        <div class="training-title">THE RHYTHM OF CASH: Understanding Cash Flow Dynamics</div>
+                        <div class="training-description">This training focuses on helping participants grasp the essential concepts of cash flow management. Participants will learn how to analyze cash inflows and outflows, identify trends, and forecast future cash needs. By understanding cash flow dynamics, participants can make informed financial decisions, improve liquidity management, and contribute to the overall financial health of the organization.</div>
+                        <div class="training-details"><b>Schedule:</b> <br> April 3-4, 2025 - 8:00 AM - 5:00 PM</div>
+                        <div class="training-details"><b>Location:</b> <br> Star Hotel Davao - Mabini St. Poblacion District, Davao City, Davao Del Sur</div>
+                        <div class="training-details"><b>Target Participants:</b> <br> Finance & Treasury Personnel, Accounting Personel, Admin Managers, Branch Managers, CFO's/ Financial Managers, COO's/ Operations Managers, CEO's/ General Managers, Treasurers, Bookkeeper, Audit Committee & Interna;, Auditors,  BOD's</div>
+                        <a href="#contact-us"><button class="upcomingButton">Contact Us</button></a>
+                    </div>
+                </div>
+                <div class="training-section" data-date="2025-04-10">
+                    <img class="training-image" src="image/UT2.jpg" alt="Training Image">
+                    <div class="training-content">
+                        <div class="training-title">Cyber Security Fundamentals</div>
+                        <div class="training-description">Learn how to protect systems from cyber threats with this in-depth security training program.</div>
+                        <div class="training-details">Schedule: August 10 - September 20, 2025</div>
+                    </div>
+                </div>
+                <div class="training-section" data-date="2025-09-05">
+                    <img class="training-image" src="image/UT3.jpg" alt="Training Image">
+                    <div class="training-content">
+                        <div class="training-title">Data Science with Python</div>
+                        <div class="training-description">Explore data analysis, visualization, and machine learning using Python.</div>
+                        <div class="training-details">Schedule: September 5 - November 15, 2025</div>
+                    </div>
+                </div>
+                <div class="training-section" data-date="2025-10-20">
+                    <img class="training-image" src="image/UT4.jpg" alt="Training Image">
+                    <div class="training-content">
+                        <div class="training-title">Cloud Computing Essentials</div>
+                        <div class="training-description">Understand the fundamentals of cloud technologies and services.</div>
+                        <div class="training-details">Schedule: October 20 - December 10, 2025</div>
+                    </div>
+                </div>
+                <div class="training-section" data-date="2025-11-12">
+                    <img class="training-image" src="image/UT5.jpg" alt="Training Image">
+                    <div class="training-content">
+                        <div class="training-title">AI & Machine Learning</div>
+                        <div class="training-description">Delve into the exciting world of artificial intelligence and machine learning models.</div>
+                        <div class="training-details">Schedule: November 12 - January 25, 2026</div>
+                    </div>
+                </div>
+            </div>
+            <div id="finished-trainings" style="display: none;"></div>
         </div>
     </section>
 
