@@ -1557,26 +1557,23 @@ span{
 
       /* Upcoming Event */
 
-    .slider{
-      height: 200px;
-    }
+      .training-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .training-image {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .training-content {
+        width: 100%;
+        padding-left: 0;
+      }
 
-    .news-image{
-      height: 200px;
-    }
-
-    .container-events h2 {
-      padding: 20px 0;
-    }
-
-    .image-box {
-      height: 200px;
-    }
-
-    button {
-      padding: 5px;
-      font-size: 10px;
-    }
+      .upcoming-trainings-container {
+        margin: 10px;
+      }
 
     /* Review Section */
 
