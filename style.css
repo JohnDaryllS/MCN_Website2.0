@@ -254,73 +254,57 @@ body {
 /* Upcoming Trainings */
 
 .upcoming-trainings-section {
+  padding: 20px;
   text-align: center;
 }
 
-.upcoming-trainings-container {
-  max-width: 1000px;
-  margin: 20px auto;
-}
-.upcoming-trainings-buttons {
+.trainings-buttons   {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
-.btn-trainings {
-  padding: 10px 20px;
-  margin: 5px;
+.trainings-buttons button {
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
   font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-.active {
-  background-color: #ffffff;
-  color: #007BFF;
-  border: 3px solid #007BFF;
+.trainings-buttons button:hover {
+  background-color: #0056b3;
 }
-.training-section {
+
+.training-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.training-card {
   display: flex;
   align-items: center;
   background: white;
-  padding: 20px;
-  margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  transition: transform 0.3s ease;
 }
-.training-image {
+.training-card img {
   width: 40%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
   object-fit: cover;
 }
-.training-content {
-  width: 60%;
-  padding-left: 20px;
-}
-.training-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.training-description {
-  font-size: 16px;
-  color: #555;
-}
-.training-details {
-  font-size: 14px;
-  color: #333;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-.upcomingButton {
-  cursor: pointer;
-  padding: 10px 20px;
-  margin: 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: #007BFF;
-  color: white;
+.training-info {
+  padding: 20px;
+  text-align: left;
+  flex: 1;
 }
 
 /* carousel Slider */
@@ -1557,23 +1541,21 @@ span{
 
       /* Upcoming Event */
 
-      .training-section {
+      .trainings-buttons button {
+        font-size: 12px;
+    }
+    .training-card {
         flex-direction: column;
-        align-items: center;
+        width: 90%;
+    }
+    .training-card img {
+        width: 100%;
+        height: auto;
+    }
+    .training-info {
         text-align: center;
-      }
-      .training-image {
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      .training-content {
-        width: 100%;
-        padding-left: 0;
-      }
-
-      .upcoming-trainings-container {
-        margin: 10px;
-      }
+        font-size: 10px;
+    }
 
     /* Review Section */
 
@@ -1915,6 +1897,15 @@ span{
     .review-content {
       text-align: left;
     }
+
+    .training-card img {
+      width: 40%;
+      height: auto;
+  }
+  .training-info {
+      text-align: center;
+      font-size: 10px;
+  }
 }
 
 
@@ -2024,6 +2015,29 @@ span{
       width: 100%;
       max-width: 300px;
     }
+
+    .training-section {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    padding: 15px;
+  }
+  .training-image {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .training-content {
+    width: 100%;
+    padding: 0;
+  }
+  .training-card img {
+    width: 50%;
+    height: auto;
+}
+.training-info {
+    text-align: center;
+    font-size: 14px;
+}
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
@@ -2046,6 +2060,15 @@ span{
     .contact-bottom {
       flex-direction: row;
     }
+
+    .training-card img {
+      width: 50%;
+      height: auto;
+  }
+  .training-info {
+      text-align: center;
+      font-size: 16px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -2069,6 +2092,11 @@ span{
     .contact-bottom {
         flex-direction: row;
     }
+
+    .training-info {
+      text-align: center;
+      font-size: 15px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
