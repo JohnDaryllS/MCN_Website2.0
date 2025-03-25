@@ -22,7 +22,7 @@ function filterTrainings(filter) {
     filteredTrainings.forEach(training => {
         const trainingCard = document.createElement("div");
         trainingCard.className = "training-card";
-        trainingCard.setAttribute("data-aos", "fade-right");
+        trainingCard.setAttribute("data-aos", "zoom-in");
         trainingCard.setAttribute("data-aos-delay", "300");
         trainingCard.setAttribute("data-aos-duration", "1000");
         trainingCard.innerHTML = `
